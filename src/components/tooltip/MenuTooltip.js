@@ -32,7 +32,7 @@ const Wrapper = styled.div`
   grid-template-columns: 150px;
 
   transition: 0.3s ease-in-out;
-  visibility: ${({ isOpen }) => (isOpen ? "visable" : "hidden")};
+  /* visibility: ${({ isOpen }) => (isOpen ? "visable" : "hidden")}; */
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
   transform: ${({ isOpen }) =>
     isOpen

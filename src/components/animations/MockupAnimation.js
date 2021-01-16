@@ -1,14 +1,14 @@
 import React from "react"
 import styled from "styled-components/macro"
 
-function MockupAnimation() {
+function MockupAnimation({ click }) {
   return (
     <Wrapper>
-      <div className="mockup1" />
-      <div className="mockup2" />
-      <div className="mockup3" />
-      <div className="mockup4" />
-      <div className="mockup5" />
+      <div className="mockup1" onClick={click} />
+      <div className="mockup2" onClick={click} />
+      <div className="mockup3" onClick={click} />
+      <div className="mockup4" onClick={click} />
+      <div className="mockup5" onClick={click} />
     </Wrapper>
   )
 }

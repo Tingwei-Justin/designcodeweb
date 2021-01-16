@@ -1,16 +1,33 @@
-import React from "react"
-// import { Link } from "gatsby"
+import React, { useState } from "react"
+// import { navigate } from "gatsby"
 import styled, { keyframes } from "styled-components/macro"
 import { H1, MediumText } from "../styles/TextStyles"
 import { themes } from "../styles/ColorStyles"
 import PurchaseButton from "../buttons/PurchaseButton"
 import MockupAnimation from "../animations/MockupAnimation"
 import WaveBackground from "../backgrounds/WaveBackground"
+import HeroPDFView from "../pdfview/HeroPDFView"
+import pdfFile from "../pdfview/test.pdf"
 
 function HeroSection() {
+  const [isShowPDF, setIsShowPDF] = useState(false)
+
+  const setToggle = event => {
+    setIsShowPDF(true)
+    console.log(isShowPDF)
+  }
+  const closeToggle = event => {
+    setIsShowPDF(false)
+  }
+
   return (
     <Wrapper>
       <WaveBackground />
+      <HeroPDFView
+        currentPDF={pdfFile}
+        isShow={isShowPDF}
+        close={closeToggle}
+      />
       <ContentWrapper>
         <TextWrapper>
           {/* <img src="/images/logos/logo.svg" alt="logo" /> */}
@@ -24,7 +41,7 @@ function HeroSection() {
           {/* <Link to="/page-2/">Go to page 2</Link> <br /> */}
         </TextWrapper>
 
-        <MockupAnimation />
+        <MockupAnimation click={setToggle} />
       </ContentWrapper>
     </Wrapper>
   )

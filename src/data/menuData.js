@@ -12,7 +12,7 @@ export const menuData = [
   {
     title: "CV",
     icon: "/images/icons/pricing.svg",
-    link: "/pricing",
+    link: "/page-2",
   },
   {
     title: "",
